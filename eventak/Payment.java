@@ -1,13 +1,16 @@
 package eventak;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Payment{
+/**
+ * A 2D ArrayList, each row is the name of the method of payment, and the details
+ * for example: 'Visa Card' '9181371678361523232' or 'Check' and nothing else
+ */
+
+public class Payment implements Serializable{
+	private static final long serialVersionUID = 7427475286363709406L;
 	private ArrayList<ArrayList<String>> details = new ArrayList<ArrayList<String>>(); 
-	/* *
-	 * A 2D ArrayList, each row is the name of the method of payment, and the details
-	 * for example: 'Visa Card' '9181371678361523232' or 'Check' and nothing else
-	 * */
 	public void addMethod(String name){
 		ArrayList<String> temp = new ArrayList<String>();
 		temp.add(name);

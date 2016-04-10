@@ -1,11 +1,29 @@
 package eventak;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Contact {
+/**
+ * Contacts are the mother/superclass of all Guests/Sponsors and are used anywhere that could be of use to the event agency.
+ * Venues and Entertainment have contacts.
+ * Useful because contact lists can exist.
+ * Has:
+ * - name: Name of contact
+ * - emails: List of emails (because who has 1 email nowadays)
+ * - phones: List of phones
+ * 
+ * .getEmails() and .getPhones() both return Strings/exception strings because they're lists of Strings and not Email/Phone objects.
+ * */
+
+public class Contact implements Serializable{
+	
+	private static final long serialVersionUID = 5078177864531652165L;
 	private String name;
 	private ArrayList<String> emails = new ArrayList<String>(); 
 	private ArrayList<String> phones = new ArrayList<String>(); 
+	Contact(){
+		// for serializable
+	}
 	Contact(String name){
 		this.name=name;
 	}
@@ -18,12 +36,14 @@ public class Contact {
 		this.phones.add(phone);
 		this.emails.add(email);
 	}
+	
 	public void addEmail(String email){
 		this.emails.add(email);
 	}
 	public void addPhone(String phone){
 		this.phones.add(phone);
 	}
+	
 	public String getEmails(){
 		// emails toString
 		if (this.emails.isEmpty()){

@@ -1,12 +1,27 @@
 package eventak;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Venue {
+/**
+ * Event venue data/methods.
+ * Has:
+ * - name: Name of venue
+ * - address
+ * - phones
+ * - contact: of type Contact, optional.
+ * 
+ * */
+
+public class Venue implements Serializable{
+	private static final long serialVersionUID = -6237101312662436159L;
 	private String name;
 	private String address;
 	private ArrayList<String> phones = new ArrayList<String>();
 	private Contact contact; // optional
+	Venue(){
+		// for serialization purposes
+	}
 	Venue(String name){
 		this.name = name;
 	}
@@ -29,6 +44,11 @@ public class Venue {
 		this.contact = contact;
 	}
 	public Contact getContact() throws NotAddedException{
+		/**
+		 * @return Contact 
+		 * @except NotAddedException if this venue doesn't have a contact yet
+		 * 
+		 * */
 		if(this.contact != null){
 			return this.contact;
 		}

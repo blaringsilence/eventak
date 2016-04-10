@@ -1,8 +1,23 @@
 package eventak;
 
-public class Cost {
+import java.io.Serializable;
+
+/**
+ * Cost. Covers budget, etc.
+ * Made instead of using an int for budget because calculations for cost/person / estimations/etc would be needed.
+ * Has:
+ * - total: total budget
+ * - people: number of people (can also be used for any partition of things. Like number of booths, etc)
+ * */
+
+public class Cost implements Serializable{
+	
+	private static final long serialVersionUID = -1764428783520950965L;
 	private int total = 0;
 	private int people = 0;
+	Cost(){
+		// for serialization purposes
+	}
 	Cost(int cost){
 		this.total = cost;
 	}

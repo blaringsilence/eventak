@@ -1,6 +1,16 @@
 package eventak;
 
+/**
+ * Guest object.
+ * Has everything a Contact has and:
+ * - RSVP (attending): default: true/Regrets Only. Guests are attending by default.
+ * - address: optional, if an invitation is supposed to be sent by snail mail.
+ * - comment: optional, if the guest has any comment
+ * 
+ * */
+
 public class Guest extends Contact{
+	private static final long serialVersionUID = -2918147648655512461L;
 	private boolean RSVP = true; // Default: Regrets Only. Means: only respond (RSVP) if you're not coming. Therefore, default is true.
 	private String address;
 	private String comment; // optional. If Guest has a certain comment about meals, etc, it's stored here.
