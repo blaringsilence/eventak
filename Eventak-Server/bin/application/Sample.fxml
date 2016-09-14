@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="350.0" prefWidth="692.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <BorderPane prefHeight="358.0" prefWidth="692.0">
+         <top>
+            <TextFlow prefHeight="43.0" prefWidth="692.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="TOP" prefHeight="44.0" prefWidth="116.0" text="Eventak" textAlignment="CENTER">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="38.0" prefWidth="152.0" text="| Admin Control">
+                     <font>
+                        <Font name="Cambria Italic" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </TextFlow>
+         </top>
+         <center>
+            <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="298.0" minWidth="10.0" prefWidth="298.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="294.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="131.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="224.0" minHeight="10.0" prefHeight="131.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="141.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="addParty" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openAddParty" prefHeight="95.0" prefWidth="144.0" text="Create Party" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="addConcert" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openAddConcert" prefHeight="95.0" prefWidth="144.0" text="Create Concert" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="editParty" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openEditParty" prefHeight="95.0" prefWidth="144.0" text="Manage Party" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="editConcert" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openEditConcert" prefHeight="95.0" prefWidth="144.0" text="Manage Concert" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="CENTER" prefHeight="29.0" prefWidth="201.0" text="PARTY">
+                     <font>
+                        <Font name="Cambria" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="29.0" prefWidth="201.0" text="CONCERT" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Cambria" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="50.0" right="50.0" />
+               </padding>
+            </GridPane>
+         </center>
+         <right>
+            <VBox prefHeight="428.0" prefWidth="217.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="addContact" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openAddContact" prefHeight="37.0" prefWidth="208.0" text="Add Contact">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="editContact" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openEditContact" prefHeight="37.0" prefWidth="195.0" text="View Contacts">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Button>
+
+               </children>
+               <padding>
+                  <Insets bottom="40.0" left="10.0" right="20.0" top="57.0" />
+               </padding>
+            </VBox>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

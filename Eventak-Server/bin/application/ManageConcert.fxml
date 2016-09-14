@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="349.0" prefWidth="490.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ManageConcertController">
+   <children>
+      <BorderPane prefHeight="349.0" prefWidth="490.0">
+         <top>
+            <TextFlow prefHeight="51.0" prefWidth="490.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="52.0" prefWidth="490.0" text="Double click on a concert to edit, right click for tickets :">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="19.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </TextFlow>
+         </top>
+         <center>
+            <ListView fx:id="concertList" onMouseClicked="#openParty" prefHeight="252.0" prefWidth="490.0" BorderPane.alignment="CENTER">
+               <contextMenu>
+                  <ContextMenu fx:id="rightClick">
+                    <items>
+                      <MenuItem fx:id="manageTicketOption" mnemonicParsing="false" onAction="#manageTicket" text="Manage Tickets" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu></ListView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

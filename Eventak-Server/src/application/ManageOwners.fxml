@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="397.0" prefWidth="472.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ManageOwnersController">
+   <children>
+      <VBox layoutX="-1.0" prefHeight="397.0" prefWidth="472.0">
+         <children>
+            <TextFlow prefHeight="40.0" prefWidth="329.0">
+               <children>
+                  <Label prefHeight="40.0" prefWidth="330.0" fx:id="titleText" text="Manage">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </TextFlow>
+            <ListView fx:id="ownerList" onMouseClicked="#ownerSelect" prefHeight="268.0" prefWidth="432.0" />
+            <HBox prefHeight="97.0" prefWidth="432.0" spacing="10.0">
+               <children>
+                  <Button fx:id="addOwner" mnemonicParsing="false" onAction="#addOwner" prefHeight="37.0" prefWidth="251.0" text="Add Owner">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="editOwner" disable="true" mnemonicParsing="false" onAction="#editOwner" prefHeight="37.0" prefWidth="119.0" text="Edit">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="deleteOwner" disable="true" mnemonicParsing="false" onAction="#deleteOwner" prefHeight="37.0" prefWidth="119.0" text="Delete" textFill="#b52f2f">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

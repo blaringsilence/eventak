@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="250.0" prefWidth="407.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.AddSponsorController">
+   <children>
+      <VBox prefHeight="258.0" prefWidth="407.0">
+         <children>
+            <TextFlow prefHeight="48.0" prefWidth="407.0">
+               <children>
+                  <Label fx:id="titleText" prefHeight="48.0" prefWidth="408.0" text="Sponsor">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="19.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </TextFlow>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="197.0" minWidth="10.0" prefWidth="131.0" />
+                <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="276.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="162.0" text="Name:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="162.0" text="Phone:" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="162.0" text="Email:" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="162.0" text="Payment Method:" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="162.0" text="Payment Detail:" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="sponsorName" onKeyTyped="#validateForm" prefHeight="25.0" prefWidth="255.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="sponsorPhone" onKeyTyped="#validateForm" prefHeight="25.0" prefWidth="255.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="sponsorEmail" onKeyTyped="#validateForm" prefHeight="25.0" prefWidth="255.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="sponsorPaymentMethod" onKeyTyped="#validateForm" prefHeight="25.0" prefWidth="255.0" promptText="Credit Card, Check, etc.." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="sponsorPaymentDetail" onKeyTyped="#validateForm" prefHeight="25.0" prefWidth="255.0" promptText="Credit Card Number, etc.." GridPane.columnIndex="1" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+            <Button fx:id="saveSponsor" defaultButton="true" disable="true" mnemonicParsing="false" onAction="#saveSponsor" prefHeight="30.0" prefWidth="372.0" text="Save">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="15.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

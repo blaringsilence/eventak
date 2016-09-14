@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="331.0" prefWidth="442.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddPartyController">
+   <children>
+      <GridPane prefHeight="332.0" prefWidth="442.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="141.0" />
+          <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="289.0" minWidth="10.0" prefWidth="289.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="89.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="89.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="320.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="118.0" minHeight="3.0" prefHeight="11.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="177.0" minHeight="9.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="164.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="242.0" minHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="406.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="320.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="38.0" prefWidth="140.0" text="Title:" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="38.0" prefWidth="140.0" text="Type:" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="partyTitle" onKeyTyped="#validateKeys" prefHeight="25.0" prefWidth="259.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="partyType" prefHeight="25.0" prefWidth="258.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="createParty" defaultButton="true" disable="true" mnemonicParsing="false" onAction="#createParty" prefHeight="29.0" prefWidth="360.0" text="Save" GridPane.columnSpan="2" GridPane.rowIndex="9">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </Button>
+            <Line endX="400.0" opacity="0.21" startX="-50.0" GridPane.rowIndex="4" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="453.0" text="GENERAL" GridPane.columnSpan="2">
+               <font>
+                  <Font name="Cambria Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="453.0" text="WHOSE PARTY" GridPane.columnSpan="2" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Cambria Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="38.0" prefWidth="140.0" text="Name:" GridPane.rowIndex="6">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="highlightedName" onKeyTyped="#validateKeys" prefHeight="25.0" prefWidth="259.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label alignment="CENTER" prefHeight="38.0" prefWidth="140.0" text="Phone:" GridPane.rowIndex="7">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="highlightedPhone" onKeyTyped="#validateKeys" prefHeight="25.0" prefWidth="259.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label alignment="CENTER" prefHeight="38.0" prefWidth="140.0" text="Email:" GridPane.rowIndex="8">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="highlightedEmail" onKeyTyped="#validateKeys" prefHeight="25.0" prefWidth="259.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label alignment="CENTER" prefHeight="38.0" prefWidth="140.0" text="Date:" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="partyDate" onAction="#validateForm" prefHeight="25.0" prefWidth="257.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

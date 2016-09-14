@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="232.0" prefWidth="309.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ShowPartyController">
+   <children>
+      <BorderPane prefHeight="256.0" prefWidth="545.0">
+         <top>
+            <TextFlow prefHeight="60.0" prefWidth="443.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="60.0" prefWidth="443.0" text="Manage Party">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="19.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </TextFlow>
+         </top>
+         <center>
+            <GridPane prefHeight="108.0" prefWidth="328.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="196.0" />
+                <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="558.0" minWidth="10.0" prefWidth="349.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="55.0" prefWidth="172.0" text="Title:">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="partyTitle" onKeyTyped="#validateKeys" prefHeight="25.0" prefWidth="242.0" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets top="-5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label fx:id="typeLabel" alignment="CENTER" prefHeight="55.0" prefWidth="172.0" text="Type:" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="55.0" prefWidth="172.0" text="Date:" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="partyDate" onAction="#validateForm" prefHeight="25.0" prefWidth="244.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets top="5.0" />
+                     </GridPane.margin>
+                  </DatePicker>
+                  <ChoiceBox fx:id="partyType" onAction="#validateForm" prefHeight="25.0" prefWidth="244.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+         </center>
+         <bottom>
+            <HBox prefHeight="39.0" prefWidth="545.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="saveParty" defaultButton="true" disable="true" mnemonicParsing="false" onAction="#saveParty" prefHeight="25.0" prefWidth="543.0" text="Save">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+         </bottom>
+         <right>
+            <VBox prefHeight="126.0" prefWidth="217.0" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="manageOwners" mnemonicParsing="false" onAction="#manageOwners" prefHeight="25.0" prefWidth="194.0" text="Owner(s)">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="manageSponsers" mnemonicParsing="false" onAction="#manageSponsors" prefHeight="25.0" prefWidth="194.0" text="Sponsor(s)">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="manageGuests" mnemonicParsing="false" onAction="#manageGuests" prefHeight="25.0" prefWidth="194.0" text="Guests">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="manageEntertainment" mnemonicParsing="false" onAction="#manageEntertainment" prefHeight="25.0" prefWidth="194.0" text="Entertainment">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
